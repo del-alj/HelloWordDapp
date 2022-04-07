@@ -46,17 +46,17 @@ export const HelloWord = () => {
     setContract(tempContract);
   };
 
-  // const getCurrentVal = async () => {
-  //   let val = await contract.get();
-  //   setCurrentContractVal(val);
-  // }
+  const getCurrentVal = async () => {
+    let val = await contract.get();
+    setCurrentContractVal(val);
+  };
   return (
     <div>
-      <h3>{'Get/ set Interaction with  contract !'}</h3>
+      <h3>{"Get/ set Interaction with  contract !"}</h3>
       <button onClick={connectWalletHandler}>{connButtonText}</button>
       <h3>Address: {defaultAccount}</h3>
 
-      <button onClick={connectWalletHandler}> Get Current Value </button>
+      <button onClick={getCurrentVal}> Get Current Value </button>
       {currentContractVal}
       {errorMessage}
     </div>
